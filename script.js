@@ -13,9 +13,11 @@ userInput.addEventListener("keydown", function(event){
 function addItem(){
     var h2=document.createElement("h2");
     h2.innerHTML = " - " + userInput.value;
+
     h2.addEventListener("click",function(){
         h2.style.textDecoration = "line-through";
     })
+    
     allItems.insertAdjacentElement("beforeend", h2);
     userInput.value="";
 }
